@@ -1,7 +1,11 @@
 <script setup></script>
 
 <template>
-  <div>index page</div>
+  <div>
+    <Alert />
+    <Profile />
+    <ProfileHeader />
+  </div>
 </template>
 
 <!-- / -->

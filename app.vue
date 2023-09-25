@@ -1,14 +1,7 @@
 <template>
   <div>
     <NuxtLayout>
-      <header>
-        <ul>
-          <li>
-            <NuxtLink to="/">Home</NuxtLink>
-            <NuxtLink to="/events">Events</NuxtLink>
-          </li>
-        </ul>
-      </header>
+      <Header></Header>
       <NuxtPage></NuxtPage>
     </NuxtLayout>
   </div>
