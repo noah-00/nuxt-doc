@@ -3,6 +3,14 @@
 // If you define a function in composables, you can use it in the script tag anywhere.
 const { sayHello } = useUtils();
 sayHello();
+
+// -------------------------- Plugins ---------------------------------------
+const { $sayMsg } = useNuxtApp();
+$sayMsg("pages/index.vue");
+
+// -------------------------- utils ---------------------------------------
+// If you define a function in utils, you can use it in the script tag anywhere.
+console.log(TEST_CONST);
 </script>
 
 <template>
