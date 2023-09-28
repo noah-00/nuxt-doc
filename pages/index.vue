@@ -1,4 +1,9 @@
-<script setup></script>
+<script setup lang="ts">
+// -------------------------- composables ---------------------------------------
+// If you define a function in composables, you can use it in the script tag anywhere.
+const { sayHello } = useUtils();
+sayHello();
+</script>
 
 <template>
   <!----------------------- Auto Import Components ---------------------------->
