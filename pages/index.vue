@@ -16,6 +16,9 @@
   <!-- <img src="@/assets/icon.png" alt="image" /> -->
   <!-- In the public folder, http://localhost:3000/icon.png is accessible. -->
   <img src="/icon.png" alt="image" />
+
+  <!----------------------- SVG icon ---------------------------->
+  <IconsBell />
 </template>
 
 <!-- / -->
