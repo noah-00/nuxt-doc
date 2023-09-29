@@ -11,6 +11,9 @@ $sayMsg("pages/index.vue");
 // -------------------------- utils ---------------------------------------
 // If you define a function in utils, you can use it in the script tag anywhere.
 console.log(TEST_CONST);
+
+// -------------------------- store ---------------------------------------
+const counter = useCounter();
 </script>
 
 <template>
@@ -32,6 +35,14 @@ console.log(TEST_CONST);
 
   <!----------------------- SVG icon ---------------------------->
   <IconsBell />
+
+  <!----------------------- State -------------------------------->
+  <Counter />
+  <div>
+    <p>Count: {{ counter }}</p>
+    <button @click="counter++" class="mr-2">Increment</button>
+    <button @click="counter--">Decrement</button>
+  </div>
 </template>
 
 <!-- / -->
