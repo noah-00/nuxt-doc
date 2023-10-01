@@ -4,6 +4,11 @@
 definePageMeta({
   layout: "custom",
 });
+
+// if you want to disable the default layout, you can use the definePageMeta function.
+definePageMeta({
+  layout: false,
+});
 </script>
 
 <template>
