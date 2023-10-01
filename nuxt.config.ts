@@ -2,6 +2,13 @@
 import { resolve } from "path";
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: "Nuxt 3 tutorial",
+      meta: [{ name: "description", content: "Nuxt 3 tutorial" }],
+      link: [{ rel: "icon", href: "./public/icon.png" }],
+    },
+  },
   alias: {
     "@": resolve(__dirname, "/src"),
     assets: "/<rootDir>/assets",
