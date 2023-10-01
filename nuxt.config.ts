@@ -8,6 +8,7 @@ export default defineNuxtConfig({
       meta: [{ name: "description", content: "Nuxt 3 tutorial" }],
       link: [{ rel: "icon", href: "./public/icon.png" }],
     },
+    pageTransition: { name: "page", mode: "out-in" },
   },
   alias: {
     "@": resolve(__dirname, "/src"),

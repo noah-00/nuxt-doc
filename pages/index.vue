@@ -20,37 +20,39 @@ const isShow = ref(false);
 </script>
 
 <template>
-  <!----------------------- Auto Import Components ---------------------------->
   <div>
-    <Alert />
-    <Profile />
-    <ProfileHeader />
+    <!----------------------- Auto Import Components ---------------------------->
+    <div>
+      <Alert />
+      <Profile />
+      <ProfileHeader />
+    </div>
+
+    <!----------------------- Auto Import Layouts ---------------------------->
+    <!----- Automatically, the default.vue layout is loaded and drawn. ------->
+
+    <!----------------------- assets image ---------------------------->
+    <!-- If you save the image in the assets folder, http://localhost:3000/icon.png is not accessible. -->
+    <!-- <img src="@/assets/icon.png" alt="image" /> -->
+    <!-- In the public folder, http://localhost:3000/icon.png is accessible. -->
+    <img src="/icon.png" alt="image" />
+
+    <!----------------------- SVG icon ---------------------------->
+    <IconsBell />
+
+    <!----------------------- State -------------------------------->
+    <Counter />
+    <div>
+      <p>Count: {{ counter }}</p>
+      <button @click="counter++" class="mr-2">Increment</button>
+      <button @click="counter--">Decrement</button>
+    </div>
+
+    <!----------------------- LazyComponents ----------------------->
+    <!----  LazyComponents are loaded only when they are used. ----->
+    <button @click="isShow = !isShow">Toggle</button>
+    <LazyIconsBell v-if="isShow" />
   </div>
-
-  <!----------------------- Auto Import Layouts ---------------------------->
-  <!----- Automatically, the default.vue layout is loaded and drawn. ------->
-
-  <!----------------------- assets image ---------------------------->
-  <!-- If you save the image in the assets folder, http://localhost:3000/icon.png is not accessible. -->
-  <!-- <img src="@/assets/icon.png" alt="image" /> -->
-  <!-- In the public folder, http://localhost:3000/icon.png is accessible. -->
-  <img src="/icon.png" alt="image" />
-
-  <!----------------------- SVG icon ---------------------------->
-  <IconsBell />
-
-  <!----------------------- State -------------------------------->
-  <Counter />
-  <div>
-    <p>Count: {{ counter }}</p>
-    <button @click="counter++" class="mr-2">Increment</button>
-    <button @click="counter--">Decrement</button>
-  </div>
-
-  <!----------------------- LazyComponents ----------------------->
-  <!----  LazyComponents are loaded only when they are used. ----->
-  <button @click="isShow = !isShow">Toggle</button>
-  <LazyIconsBell v-if="isShow" />
 </template>
 
 <!-- / -->
