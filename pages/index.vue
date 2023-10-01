@@ -14,6 +14,9 @@ console.log(TEST_CONST);
 
 // -------------------------- store ---------------------------------------
 const counter = useCounter();
+
+// -------------------------- LazyComponents ------------------------------
+const isShow = ref(false);
 </script>
 
 <template>
@@ -43,6 +46,11 @@ const counter = useCounter();
     <button @click="counter++" class="mr-2">Increment</button>
     <button @click="counter--">Decrement</button>
   </div>
+
+  <!----------------------- LazyComponents ----------------------->
+  <!----  LazyComponents are loaded only when they are used. ----->
+  <button @click="isShow = !isShow">Toggle</button>
+  <LazyIconsBell v-if="isShow" />
 </template>
 
 <!-- / -->
