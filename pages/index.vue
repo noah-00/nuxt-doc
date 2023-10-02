@@ -50,7 +50,9 @@ const isShow = ref(false);
 
     <!----------------------- LazyComponents ----------------------->
     <!----  LazyComponents are loaded only when they are used. ----->
-    <button @click="isShow = !isShow">Toggle</button>
+    <button @click="isShow = !isShow" class="bg-red-500 p-2 mt-2">
+      Toggle
+    </button>
     <LazyIconsBell v-if="isShow" />
   </div>
 </template>
