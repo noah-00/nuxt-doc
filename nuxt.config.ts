@@ -22,5 +22,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  ssr: false,
+  routeRules: {
+    "/pageRendering/ssr": { ssr: true },
+    "/pageRendering/csr": { ssr: false },
+  },
 });

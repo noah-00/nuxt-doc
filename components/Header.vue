@@ -4,8 +4,13 @@
   <header>
     <ul>
       <li>
-        <NuxtLink to="/">Home</NuxtLink>
-        <NuxtLink to="/events">Events</NuxtLink>
+        <NuxtLink class="mx-2" to="/">Home</NuxtLink>
+        <NuxtLink class="mx-2" to="/events">Events</NuxtLink>
+        <NuxtLink class="mx-2" to="/pageRendering/csr">CSR</NuxtLink>
+        <NuxtLink class="mx-2" to="/pageRendering/ssr">SSR</NuxtLink>
+        <NuxtLink class="mx-2" to="/pageRendering/universalMode"
+          >UNIVERSAL MODE</NuxtLink
+        >
       </li>
     </ul>
   </header>
