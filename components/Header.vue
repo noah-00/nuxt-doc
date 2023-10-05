@@ -11,6 +11,8 @@
         <NuxtLink class="mx-2" to="/pageRendering/universalMode"
           >UNIVERSAL MODE</NuxtLink
         >
+        <NuxtLink class="mx-2" to="/storeImport/first">STORE</NuxtLink>
+        <NuxtLink class="mx-2" to="/storeImport/second">STORE SECOND</NuxtLink>
       </li>
     </ul>
   </header>
