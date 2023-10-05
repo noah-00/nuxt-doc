@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     assets: "/<rootDir>/assets",
   },
   css: ["~/assets/main.scss"],
-  modules: ["@nuxtjs/tailwindcss"],
+  modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt"],
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -25,5 +25,11 @@ export default defineNuxtConfig({
   routeRules: {
     "/pageRendering/ssr": { ssr: true },
     "/pageRendering/csr": { ssr: false },
+  },
+  pinia: {
+    autoImports: ["defineStore", "storeToRefs"],
+  },
+  imports: {
+    dirs: ["stores"],
   },
 });
